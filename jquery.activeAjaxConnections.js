@@ -13,9 +13,9 @@
     beforeSend: function(request){
       pool.push(request);
     },
-    complete: function(request){
+    ajaxComplete: function(request){
       var index = pool.indexOf(request);
-      pool.slice(index,1);
+      pool.splice(index,1);
     }
   });
 
